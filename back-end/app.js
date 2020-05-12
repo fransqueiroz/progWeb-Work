@@ -19,8 +19,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+//imports Routes
 const teste = require('./routes/teste');
 app.use('/teste',teste);
+
+const empresa = require('./routes/empresa');
+app.use('/empresa');
+
+const candidato = require('./routes/candidato');
+app.use('/candidato');
 
 
 module.exports = app;
