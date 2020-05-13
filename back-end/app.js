@@ -24,10 +24,16 @@ const teste = require('./routes/teste');
 app.use('/teste',teste);
 
 const empresa = require('./routes/empresa');
-app.use('/empresa');
+app.use('/empresa', empresa);
 
 const candidato = require('./routes/candidato');
-app.use('/candidato');
+app.use('/candidato', candidato);
+
+const avaliador = require('./routes/avaliador');
+app.use('/avaliador', avaliador);
+
+const administrador = require('./routes/administrador');
+app.use('/administrador', administrador);
 
 
 module.exports = app;
