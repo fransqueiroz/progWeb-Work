@@ -21,6 +21,7 @@ controller.listar = async (req, res) => {
   }else{
     try {
       const lista = await Avaliador.find();
+      res.send(lista)
     } catch (error) {
       console.log(erro);
       res.status(500).send(erro);

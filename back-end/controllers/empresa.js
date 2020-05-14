@@ -21,6 +21,7 @@ controller.listar = async (req, res) => {
   }else{
     try {
       const lista = await Empresa.find();
+      res.send(lista)
     } catch (error) {
       console.log(erro);
       res.status(500).send(erro);
@@ -77,3 +78,15 @@ controller.excluir = async (req,res) =>{
 }
 
 module.exports = controller;
+
+/*
+{
+	"razao_social" : "Teste 2 Empresa S/A",
+	"nome_fantasia": "Empresa Teste",
+	"cnpj": "53.965.982/0001-56",
+	"inscricao_estadual": "isento",
+	"endereco": "Rua dos Testes nº 333",
+	"telefone": "(11) 1236-9999",
+	"email": "empresa@empresateste.com.br"
+}
+*/
