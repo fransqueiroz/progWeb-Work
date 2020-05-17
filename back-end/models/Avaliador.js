@@ -5,8 +5,9 @@ const esquema = mongoose.Schema({
       type : String,
       required: true
   },
-  sobrenome: {
-      type : String
+  curso:{
+    type: String,
+    required: true
   },
   cpf: {
     type: String,

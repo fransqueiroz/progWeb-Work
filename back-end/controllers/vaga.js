@@ -1,10 +1,10 @@
-const Administrador = require('../models/Administrador');
+const Vaga = require('../models/Vaga');
 
 const controller = {};
 
 controller.cadastro = async (req, res) => {
   try {
-    await Administrador.create(req.body);
+    await Vaga.create(req.body);
 
     res.status(201).send(req.body);
   } catch (error) {
@@ -15,12 +15,12 @@ controller.cadastro = async (req, res) => {
 }
 
 controller.listar = async (req, res) => {
-
   if(Object.keys(req.query).length > 0){
     busca(req,res);
   }else{
     try {
-      const lista = await Administrador.find();
+      const lista = await Vaga.find().populate('empresa');
+      res.send(lista)
     } catch (error) {
       console.log(erro);
       res.status(500).send(erro);
@@ -31,7 +31,7 @@ controller.listar = async (req, res) => {
 controller.listarUm = async (req, res) => {
   try {
     const id = req.params.id;
-    const obj = await Administrador.findById(id);
+    const obj = await Vaga.findById(id);
 
     if(obj){
       res.send(obj);
@@ -47,7 +47,7 @@ controller.listarUm = async (req, res) => {
 controller.atualizar = async (req,res) =>{
   try{
       const id = req.body._id;
-      const obj = await Administrador.findByIdAndUpdate(id, req.body);
+      const obj = await Vaga.findByIdAndUpdate(id, req.body);
       if(obj){
           res.status(204).end();
       }else{
@@ -63,7 +63,7 @@ controller.atualizar = async (req,res) =>{
 controller.excluir = async (req,res) =>{
   try{
       const id = req.body._id;
-      const obj = await Administrador.findByIdAndDelete(id);
+      const obj = await Vaga.findByIdAndDelete(id);
       if(obj){
           res.status(204).end();
       }else{

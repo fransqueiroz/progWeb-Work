@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const controller = require('../controllers/administrador');
+const controller = require('../controllers/vaga');
 
 router.post('/', controller.cadastro);
 router.get('/', controller.listar);

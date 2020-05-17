@@ -20,9 +20,6 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 //imports Routes
-const teste = require('./routes/teste');
-app.use('/teste',teste);
-
 const empresa = require('./routes/empresa');
 app.use('/empresa', empresa);
 
@@ -32,8 +29,11 @@ app.use('/candidato', candidato);
 const avaliador = require('./routes/avaliador');
 app.use('/avaliador', avaliador);
 
-const administrador = require('./routes/administrador');
-app.use('/administrador', administrador);
+const vaga = require('./routes/vaga');
+app.use('/vaga', vaga);
+
+const curriculo = require('./routes/curriculo');
+app.use('/curriculo', curriculo);
 
 
 module.exports = app;

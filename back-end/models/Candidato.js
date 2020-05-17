@@ -5,9 +5,6 @@ const esquema = mongoose.Schema({
       type : String,
       required: true
   },
-  sobrenome: {
-      type : String
-  },
   cpf: {
     type: String,
     required: true,
