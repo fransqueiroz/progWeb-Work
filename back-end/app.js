@@ -29,6 +29,9 @@ app.use('/candidato', candidato);
 const avaliador = require('./routes/avaliador');
 app.use('/avaliador', avaliador);
 
+const administrador = require('./routes/administrador')
+app.use('/administrador', administrador);
+
 const vaga = require('./routes/vaga');
 app.use('/vaga', vaga);
 
