@@ -29,3 +29,14 @@ const esquema = mongoose.Schema({
 })
 
 module.exports = mongoose.model('Curriculo', esquema, 'curriculos');
+
+/*
+{
+ "dadosPessoais" : "5ec13e542b14e66d6bcd7e16"	,
+	"objetivo": "Conseguir primeiro emprego",
+	"formacaoAcademica": "5 semestre de GPI",
+	"experiencaProfissional": "Trabalhou num bar",
+	"idiomas" : "Espanhou, Português",
+	"informacoesAdicionais": ""
+}
+*/

@@ -42,3 +42,14 @@ const esquema = mongoose.Schema({
 })
 
 module.exports = mongoose.model('Empresa', esquema, 'empresas');
+/*
+{
+	"razao_social" : "Teste 3 Empresa S/A",
+	"nome_fantasia": "Teste Empresa",
+	"cnpj": "12.654.123/0001-56",
+	"inscricao_estadual": "isento",
+	"endereco": "Rua São Paulo nº 111",
+	"telefone": "(11) 1236-9874",
+	"email": "empresa@teste3empresa.com.br"
+}
+*/

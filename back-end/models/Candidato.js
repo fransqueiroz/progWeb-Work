@@ -26,3 +26,13 @@ const esquema = mongoose.Schema({
 })
 
 module.exports = mongoose.model('Candidato', esquema, 'candidatos');
+
+/*
+{
+	"nome": "Ciclano Ferreira",
+	"cpf": "001.456.456-00",
+	"endereco": "Rua de Asfalto nº 654",
+	"telefone": "(22) 98456-5678",
+	"email": "ciclano@fatec.com.br"
+}
+*/
