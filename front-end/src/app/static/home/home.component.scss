@@ -1,0 +1,24 @@
+mat-toolbar {
+    background-color: #313131;
+    justify-content: flex-end;
+    
+
+    #signup_btn {
+        background-color: #FF834F;
+        color: #313131;
+        font-family: Montserrat !important;
+        font-weight: 400 !important;
+    }
+
+    #signin_btn {
+        color: #fff;
+        font-family: Montserrat !important;
+        font-weight: 400 !important;
+    }
+}
+div#container {
+    text-align: center;
+}
+img {
+    margin: 40px auto;
+}

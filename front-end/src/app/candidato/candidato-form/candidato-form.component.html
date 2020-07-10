@@ -1,0 +1,44 @@
+<p class="form_title">{{ title }}</p>
+
+<form class="std-form formcss mat-elevation-z4" #f="ngForm" (ngSubmit)="salvar(f)">
+
+   <mat-form-field>
+      <mat-label>Nome</mat-label>
+      <input matInput [(ngModel)]="candidato.nome" name="nome" required placeholder="Informe o nome do candidato">
+   </mat-form-field>
+
+   <mat-form-field>
+      <mat-label>CPF</mat-label>
+      <input matInput [(ngModel)]="candidato.cpf" name="cpf" required placeholder="Informe o CPF do candidato" mask="000.000.000-00">
+   </mat-form-field>
+
+   <mat-form-field>
+      <mat-label>Endereço</mat-label>
+      <textarea matInput [(ngModel)]="candidato.endereco" name="endereco" required placeholder="Informe o endereço do candidato" rows="4"></textarea>
+   </mat-form-field>
+
+   <mat-form-field class="field_w_icon">
+      <mat-label>Telefone</mat-label>
+      <mat-icon class="form_icon" matPrefix>contact_phone</mat-icon>
+      <input matInput [(ngModel)]="candidato.telefone" name="telefone" required placeholder="Informe o telefone do candidato">
+   </mat-form-field>
+
+   <mat-form-field class="field_w_icon">
+      <mat-label>E-mail</mat-label>
+      <mat-icon class="form_icon" matPrefix>contact_mail</mat-icon>
+      <input type="email" matInput [(ngModel)]="candidato.email" name="email" required placeholder="Informe o email do candidato">
+   </mat-form-field>
+
+   <mat-toolbar class="form-buttons">
+      <mat-toolbar-row>
+         
+         <button class="voltar_button" mat-raised-button type="button" (click)="voltar(f)">
+            Voltar
+         </button>
+         <button class="salvar_button" mat-raised-button type="submit" color="accent">
+            Salvar
+         </button>
+      </mat-toolbar-row>
+   </mat-toolbar>
+
+</form>

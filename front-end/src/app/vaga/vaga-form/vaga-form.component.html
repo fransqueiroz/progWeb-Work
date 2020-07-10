@@ -1,0 +1,71 @@
+<p class="form_title">{{ title }}</p>
+
+<form class="std-form formcss mat-elevation-z4" #f="ngForm" (ngSubmit)="salvar(f)">
+
+   <mat-form-field>
+      <!--
+         O <mat-select> lista os dados de uma entidade para que seja possível
+         associar um deles relacionado a outra entidade.
+
+         No cabeçalho do <mat-select> colocamos a entidade que é o DESTINO
+         do relacionamento (a entidade à qual pertencem os dados do formulário).
+      -->
+      <mat-select placeholder="Selecione a Empresa" required [(ngModel)]="vaga.empresa" name="empresa">
+
+         <!--
+            No <mat-option> colocamos a entidade relacionada (aquela cujos dados
+            serão listados).
+            No atributo [value], será colocado sempre o _id da entidade relacionada.
+            Entre {{ }}, colocamos o que queremos que o usuário veja na listagem.
+            Quando o usuário fizer a seleção, o _id da entidade relacionada será
+            atribuído ao atributo indicado no ngModel da entidade de destino.
+         -->
+         <mat-option *ngFor="let empresa of empresas" [value]="empresa._id">
+            {{ empresa.nome_fantasia }}
+         </mat-option>
+      </mat-select>
+   </mat-form-field>
+
+   <mat-form-field>
+        <mat-label>Título da Vaga</mat-label>
+        <input matInput [(ngModel)]="vaga.nome_vaga" name="nome_vaga" placeholder="Informe o título da vaga">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Local de Trabalho</mat-label>
+        <input matInput [(ngModel)]="vaga.localDeTrabalho" name="localDeTrabalho" placeholder="Informe o local de trabalho">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Nível de Escolaridade</mat-label>
+        <input matInput [(ngModel)]="vaga.nivelEscolaridade" name="nivelEscolaridade" placeholder="Informe o nível de escolaridade da vaga">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Descrição da Vaga</mat-label>
+        <input matInput [(ngModel)]="vaga.descricao" name="descricao" placeholder="Informe a descrição da vaga">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Benefícios da Vaga</mat-label>
+        <input matInput [(ngModel)]="vaga.beneficios" name="beneficios" placeholder="Informe os benefícios da vaga">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Horário de Trabalho</mat-label>
+        <input matInput [(ngModel)]="vaga.horarioTrabalho" name="horarioTrabalho" placeholder="Informe o horário de trabalho da vaga">
+    </mat-form-field>
+
+    <mat-toolbar class="form-buttons">
+      <mat-toolbar-row>
+         
+         <button class="voltar_button" mat-raised-button type="button" (click)="voltar(f)">
+            Voltar
+         </button>
+         <button class="salvar_button" mat-raised-button type="submit" color="accent">
+            Salvar
+         </button>
+      </mat-toolbar-row>
+   </mat-toolbar>
+
+</form>

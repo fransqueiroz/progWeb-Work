@@ -1,0 +1,124 @@
+@import "~material-design-icons/iconfont/material-icons.css";
+
+html, body { height: 100%; background-color: #e5e5e5;}
+body { 
+    margin: 0;
+}
+.mat-tab-label {
+    font-family: montserrat;
+    color: #313131 !important;
+    font-weight: 500;
+    font-size: 14px;
+}
+.mat-tab-label-active {
+    font-family: montserrat;
+    color: #313131 !important;
+    font-weight: 600;
+    font-size: 18px;
+}
+mat-ink-bar {background-color: #FF834F !important;}
+.mat-raised-button {
+    background-color: #FF834F !important;
+    font-family: Montserrat !important;
+    font-weight: 400 !important;
+}
+.alignContent_right {
+    text-align: right;
+    width: 100%;
+    margin: 25px 0 15px 0;
+}
+.new_item_icon {
+    position: relative;
+    top: -1px;
+    left: -5px;
+}
+.tablecss {
+    width: 100%;
+    margin-bottom: 70px;
+    background-color: #f5f5f5;
+
+    tr {
+        height: 40px !important;
+    }
+
+    .mat-column-excluir  {
+        padding-right: 5px !important;
+        text-align: center;
+
+        .mat-raised-button {
+            background-color: #FF834F !important;
+            color: #313131;
+            height: 28px;
+            line-height: 25px;
+        }
+    }    
+    .mat-column-editar {
+        padding-right: 5px !important;
+        padding-left: 5px;
+        text-align: center;
+
+        .mat-raised-button {
+            background-color: #313131 !important;
+            color: #fff !important;
+            height: 28px;
+            line-height: 25px;
+        }
+    }
+}
+.form_title {
+    font-family: montserrat;
+    color: #313131 !important;
+    font-weight: 600;
+    font-size: 18px;
+    width: 70%;
+    margin: 25px auto;
+}
+.formcss {
+    width: 500px;
+    margin: 0 auto 70px;
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+
+    .mat-form-field-infix {
+        width: 500px !important;
+    }
+    .mat-form-field.mat-focused .mat-form-field-ripple {
+        background-color: #FF834F !important;
+    }
+    .mat-form-field.mat-focused .mat-form-field-label {
+        color: #FF834F !important;
+    }
+    .form_icon {
+        position: absolute;
+        top: -20px;
+    }
+    .field_w_icon input, .field_w_icon .mat-form-field-label-wrapper{
+        text-indent: 30px;
+    }  
+    .form-buttons {
+        text-align: center;
+        font-family: montserrat;
+        font-weight: 500;
+
+        .mat-toolbar-row {
+            justify-content: flex-end;
+            padding: 0;
+        }
+
+        .voltar_button {
+            background-color: #313131 !important;
+            color: #fff !important;
+            height: 28px;
+            line-height: 25px;
+            
+        }
+        .salvar_button {
+            background-color: #FF834F !important;
+            color: #313131;
+            height: 28px;
+            line-height: 25px;
+            margin-left: 10px;
+            width: 110px;
+        }
+    }
+}

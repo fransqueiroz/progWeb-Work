@@ -1,0 +1,66 @@
+<p class="form_title">{{ title }}</p>
+
+<form class="std-form formcss mat-elevation-z4" #f="ngForm" (ngSubmit)="salvar(f)">
+
+   <mat-form-field>
+      <!--
+         O <mat-select> lista os dados de uma entidade para que seja possível
+         associar um deles relacionado a outra entidade.
+
+         No cabeçalho do <mat-select> colocamos a entidade que é o DESTINO
+         do relacionamento (a entidade à qual pertencem os dados do formulário).
+      -->
+      <mat-select placeholder="Selecione o Candidado" required [(ngModel)]="curriculo.dadosPessoais" name="dadosPessoais">
+
+         <!--
+            No <mat-option> colocamos a entidade relacionada (aquela cujos dados
+            serão listados).
+            No atributo [value], será colocado sempre o _id da entidade relacionada.
+            Entre {{ }}, colocamos o que queremos que o usuário veja na listagem.
+            Quando o usuário fizer a seleção, o _id da entidade relacionada será
+            atribuído ao atributo indicado no ngModel da entidade de destino.
+         -->
+         <mat-option *ngFor="let candidato of candidatos" [value]="candidato._id">
+            {{ candidato.nome }}
+         </mat-option>
+      </mat-select>
+   </mat-form-field>
+
+   <mat-form-field>
+        <mat-label>Objetivo</mat-label>
+        <input matInput [(ngModel)]="curriculo.objetivo" name="objetivo" placeholder="Informe o objetivo">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Formação Acadêmica</mat-label>
+        <input matInput [(ngModel)]="curriculo.formacaoAcademica" name="formacaoAcademica" placeholder="Informe a Formação Acadêmica">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Experiência Profissional</mat-label>
+        <input matInput [(ngModel)]="curriculo.experiencaProfissional" name="experiencaProfissional" placeholder="Informe a experiência profissional">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Idiomas</mat-label>
+        <input matInput [(ngModel)]="curriculo.idiomas" name="idiomas" placeholder="Informe os idiomas">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Informações Adicionais</mat-label>
+        <input matInput [(ngModel)]="curriculo.informacoesAdicionais" name="informacoesAdicionais" placeholder="Informações Adicionais">
+    </mat-form-field>
+
+    <mat-toolbar class="form-buttons">
+      <mat-toolbar-row>
+         
+         <button class="voltar_button" mat-raised-button type="button" (click)="voltar(f)">
+            Voltar
+         </button>
+         <button class="salvar_button" mat-raised-button type="submit" color="accent">
+            Salvar
+         </button>
+      </mat-toolbar-row>
+   </mat-toolbar>
+
+</form>

@@ -1,0 +1,21 @@
+mat-toolbar {
+    height: 45px;
+    background-color: #313131;
+    color: #fff;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    padding: 6px;
+
+    p {
+        font-size: 12px;
+        font-family: Montserrat !important;
+        font-weight: 300 !important;
+        padding: 0;
+        margin: 0;
+    }
+    
+    a {
+        color: #FF834F;
+    }
+}

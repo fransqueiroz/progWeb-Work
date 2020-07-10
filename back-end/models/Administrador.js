@@ -32,7 +32,7 @@ const esquema = mongoose.Schema({
 module.exports = mongoose.model('Administrador', esquema, 'administradores');
 /*
 {
-	"nome": "Avaliador Ferreira",
+	"nome": "Adm Ferreira",
 	"cpf": "789.456.321-00",
 	"funcao": "Professor GRH",
 	"endereco": "Rua de Terra nº 789",
